@@ -1,0 +1,699 @@
+<!doctype html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Steel Brothers | Студия танца и силы</title>
+        <link rel="stylesheet" href="styles.css" />
+        <link rel="stylesheet" href="adaptive.css" />
+    </head>
+    <body>
+        <div class="steel-brothers-site">
+            <!-- Header -->
+            <header class="header">
+                <div class="container">
+                    <div class="header-content">
+                        <div class="logo">
+                            <a href="#top">Steel Brothers</a>
+                        </div>
+                        <nav class="nav" aria-label="Основная навигация">
+                            <a href="#directions">Направления</a>
+                            <a href="#reviews">Отзывы</a>
+                            <a href="#contacts">Контакты</a>
+                            <a href="#faq">Вопросы</a>
+                        </nav>
+                        <a href="#form" class="header-btn">Оставить заявку</a>
+                    </div>
+                    <div id="top"></div>
+                </div>
+            </header>
+
+            <!-- Hero Section -->
+            <!-- 
+        🎨 ИЗМЕНЕНИЕ ГЛАВНОЙ СЕКЦИИ:
+        
+        ФОНОВАЯ КАРТИНКА:
+        Файл: styles.css → класс .hero → background: url('ВАША_КАРТИНКА.jpg')
+        
+        ЗАГОЛОВОК И ТЕКСТ:
+        Измените h1 и p ниже на ваши тексты
+        
+        КНОПКА:
+        Измените текст кнопки и ссылку href="#form" на нужную секцию
+        -->
+            <section class="hero">
+                <div class="hero-overlay"></div>
+                <div class="container">
+                    <div class="hero-content">
+                        <h1>Студия танца и силы Steel Brothers</h1>
+                        <p>
+                            Брейк-данс, воркаут, растяжка, pole sport и
+                            индивидуальные тренировки для детей и взрослых в
+                            Костроме
+                        </p>
+                        <a href="#form" class="btn btn-primary"
+                            >Записаться на пробное</a
+                        >
+                    </div>
+                </div>
+            </section>
+
+            <!-- Directions Section -->
+            <section id="directions" class="section directions">
+                <div class="container">
+                    <div class="section-title">
+                        <h2>Наши направления</h2>
+                    </div>
+                    <div class="directions-grid">
+                        <!-- Break Dance -->
+                        <!-- 
+                    🏃 НАСТРОЙКА НАПРАВЛЕНИЯ:
+                    
+                    КАРТИНКА: замените src в img ниже на вашу картинку
+                    ЗАГОЛОВОК: измените h3 на название вашего направления  
+                    ЦВЕТ: измените style="color: #1976d2" на нужный цвет
+                    ОПИСАНИЕ: измените текст в div.direction-description
+                    КНОПКА: измените класс btn-blue на нужный цвет (btn-green, btn-pink, и т.д.)
+                    
+                    ДОБАВЛЕНИЕ НОВОГО НАПРАВЛЕНИЯ:
+                    Скопируйте весь блок .direction-card и измените содержимое
+                    -->
+                        <div class="direction-card">
+                            <img
+                                src="https://images.unsplash.com/photo-1550259114-f43da83ca5d7?auto=format&fit=crop&w=600&q=80"
+                                alt="Break Dance"
+                            />
+                            <h3 style="color: #1976d2">
+                                Break Dance (Брейк-данс)
+                            </h3>
+                            <div class="direction-description">
+                                <b>Трюки.<br />Сила.<br />Самовыражение.</b
+                                ><br />
+                                Современный танец для детей и подростков.
+                                Развитие координации, силы, уверенности и
+                                артистизма.<br />
+                                <a href="#form" style="color: #1976d2"
+                                    >ИДЕТ НАБОР!</a
+                                >
+                            </div>
+                            <a href="#form" class="btn-blue">ЗАПИСАТЬСЯ</a>
+                        </div>
+
+                        <!-- Street Workout -->
+                        <!-- ИЗМЕНИТЬ КАРТИНКУ: замените src в img ниже -->
+                        <div class="direction-card">
+                            <img
+                                src="https://images.unsplash.com/photo-1434682881908-b43d0467b798?auto=format&fit=crop&w=600&q=80"
+                                alt="Street Workout"
+                            />
+                            <h3 style="color: #43a047">
+                                Street Workout (Воркаут)
+                            </h3>
+                            <div class="direction-description">
+                                <b>Сила.<br />Выносливость.<br />Характер.</b
+                                ><br />
+                                Уличные тренировки на турниках и брусьях. Для
+                                всех возрастов от 12 лет.<br />
+                                <a href="#form" style="color: #43a047"
+                                    >ИДЕТ НАБОР!</a
+                                >
+                            </div>
+                            <a href="#form" class="btn-green">ЗАПИСАТЬСЯ</a>
+                        </div>
+
+                        <!-- Stretching -->
+                        <!-- ИЗМЕНИТЬ КАРТИНКУ: замените src в img ниже -->
+                        <div class="direction-card">
+                            <img
+                                src="https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=600&q=80"
+                                alt="Stretching"
+                            />
+                            <h3 style="color: #e91e63">
+                                Stretching (Растяжка)
+                            </h3>
+                            <div class="direction-description">
+                                <b>Гибкость.<br />Здоровье.<br />Грация.</b
+                                ><br />
+                                Развитие гибкости и подвижности суставов. Для
+                                взрослых и детей.<br />
+                                <a href="#form" style="color: #e91e63"
+                                    >ИДЕТ НАБОР!</a
+                                >
+                            </div>
+                            <a href="#form" class="btn-pink">ЗАПИСАТЬСЯ</a>
+                        </div>
+
+                        <!-- Pole Sport -->
+                        <!-- ИЗМЕНИТЬ КАРТИНКУ: замените src в img ниже -->
+                        <div class="direction-card">
+                            <img
+                                src="https://images.unsplash.com/photo-1583199542906-8a5600e3a737?auto=format&fit=crop&w=600&q=80"
+                                alt="Pole Sport"
+                            />
+                            <h3 style="color: #9c27b0">Pole Sport</h3>
+                            <div class="direction-description">
+                                <b>Сила.<br />Гибкость.<br />Грация.</b><br />
+                                Спортивное направление на пилоне. Развитие силы,
+                                координации и пластики.<br />
+                                <a href="#form" style="color: #9c27b0"
+                                    >ИДЕТ НАБОР!</a
+                                >
+                            </div>
+                            <a href="#form" class="btn-purple">ЗАПИСАТЬСЯ</a>
+                        </div>
+
+                        <!-- Individual Training -->
+                        <!-- ИЗМЕНИТЬ КАРТИНКУ: замените src в img ниже -->
+                        <div class="direction-card">
+                            <img
+                                src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?auto=format&fit=crop&w=600&q=80"
+                                alt="Individual"
+                            />
+                            <h3 style="color: #ff5722">
+                                Индивидуальные тренировки
+                            </h3>
+                            <div class="direction-description">
+                                <b>Персональный<br />подход.</b><br />
+                                Занятия один на один с тренером по любому
+                                направлению.<br />
+                                <a href="#form" style="color: #ff5722"
+                                    >ИДЕТ НАБОР!</a
+                                >
+                            </div>
+                            <a href="#form" class="btn-orange">ЗАПИСАТЬСЯ</a>
+                        </div>
+
+                        <!-- Kids Programs -->
+                        <!-- ИЗМЕНИТЬ КАРТИНКУ: замените src в img ниже -->
+                        <div class="direction-card">
+                            <img
+                                src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=600&q=80"
+                                alt="Kids"
+                            />
+                            <h3 style="color: #795548">Детские программы</h3>
+                            <div class="direction-description">
+                                <b>Развитие.<br />Дисциплина.<br />Здоровье.</b
+                                ><br />
+                                Специальные программы для детей от 5 лет. Все
+                                направления адаптированы под возраст.<br />
+                                <a href="#form" style="color: #795548"
+                                    >ИДЕТ НАБОР!</a
+                                >
+                            </div>
+                            <a href="#form" class="btn-brown">ЗАПИСАТЬСЯ</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Photo Gallery -->
+            <section class="section photo-gallery">
+                <div class="container">
+                    <div class="section-title">
+                        <h2>Фото тренировок</h2>
+                    </div>
+                    <div class="carousel-container">
+                        <button
+                            class="carousel-nav carousel-prev"
+                            onclick="prevSlide()"
+                            aria-label="Предыдущее фото"
+                        >
+                            ‹
+                        </button>
+
+                        <div class="carousel-wrapper">
+                            <img
+                                id="mainImage"
+                                src=""
+                                alt=""
+                                onclick="openModal()"
+                            />
+                        </div>
+
+                        <button
+                            class="carousel-nav carousel-next"
+                            onclick="nextSlide()"
+                            aria-label="Следующее фото"
+                        >
+                            ›
+                        </button>
+                    </div>
+
+                    <div class="carousel-dots" id="carouselDots">
+                        <!-- Dots будут добавлены через JavaScript -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- 
+            🖼 НАСТРОЙКА ГАЛЕРЕИ МОМЕНТОВ:
+
+            КАК ЗАМЕНИТЬ ИЗОБРАЖЕНИЯ:
+            - замените src в img на свою ссылку или путь к картинке (например, ./images/moment-1.jpg)
+            - обновите alt, чтобы описать, что происходит на фото
+
+            КАК ИЗМЕНИТЬ ТЕКСТ:
+            - измените заголовок внутри <h4>
+            - задайте своё описание внутри абзаца <p>
+
+            КАК ДОБАВИТЬ НОВОЙ КАРТОЧКИ:
+            - скопируйте блок <figure class="moment-card">...</figure> и вставьте ниже
+
+            КАК РАБОТАЕТ ВИДЕО:
+            - каждая карточка открывает модальное окно с видео по соответствующему направлению
+            - список видео настраивается в script.js → videoCategories
+            -->
+            <!-- Moments Gallery -->
+            <section class="section moments-gallery">
+                <div class="container">
+                    <div class="section-title">
+                        <h2>Галерея моментов</h2>
+                    </div>
+                    <div class="moments-grid">
+                        <figure
+                            class="moment-card"
+                            role="button"
+                            tabindex="0"
+                            data-video-category="pole"
+                            aria-label="Pole Sport — посмотреть видео"
+                        >
+                            <img
+                                src="./images/abstraktnaa-kompozicia-uf-ul-trafioleta.jpg"
+                                alt="Парная тренировка на пилоне"
+                            />
+                            <figcaption>
+                                <h4>Pole Sport</h4>
+                                <p>Комбинация силы и пластики на тренировке по pole sport.</p>
+                                <button type="button" class="moment-card-cta">
+                                    Смотреть видео
+                                </button>
+                            </figcaption>
+                        </figure>
+                        <figure
+                            class="moment-card"
+                            role="button"
+                            tabindex="0"
+                            data-video-category="breakdance"
+                            aria-label="Break Dance — посмотреть видео"
+                        >
+                            <img
+                                src="./images/abstraktnaa-kompozicia-uf-ul-trafioleta (1).jpg"
+                                alt="Break dance freeze"
+                            />
+                            <figcaption>
+                                <h4>Победный freeze</h4>
+                                <p>Финальный элемент выступления на городском баттле.</p>
+                                <button type="button" class="moment-card-cta">
+                                    Смотреть видео
+                                </button>
+                            </figcaption>
+                        </figure>
+                        <figure
+                            class="moment-card"
+                            role="button"
+                            tabindex="0"
+                            data-video-category="stretching"
+                            aria-label="Stretching — посмотреть видео"
+                        >
+                            <img
+                                src="./images/abstraktnaa-kompozicia-uf-ul-trafioleta (2).jpg"
+                                alt="Элементы растяжки на полу"
+                            />
+                            <figcaption>
+                                <h4>Растяжка и стретчинг</h4>
+                                <p>Работа на гибкость и контроль движений в зале.</p>
+                                <button type="button" class="moment-card-cta">
+                                    Смотреть видео
+                                </button>
+                            </figcaption>
+                        </figure>
+                        <figure
+                            class="moment-card"
+                            role="button"
+                            tabindex="0"
+                            data-video-category="kids"
+                            aria-label="Детские группы — посмотреть видео"
+                        >
+                            <img
+                                src="./images/mahonia-9895458_1280.jpg"
+                                alt="Группа детей на занятии"
+                            />
+                            <figcaption>
+                                <h4>Детские группы</h4>
+                                <p>Тёплая атмосфера и поддержка для юных спортсменов.</p>
+                                <button type="button" class="moment-card-cta">
+                                    Смотреть видео
+                                </button>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Schedule -->
+            <section class="section schedule">
+                <div class="container">
+                    <div class="section-title">
+                        <h2>Расписание занятий</h2>
+                    </div>
+                    <div class="calendar-container">
+                        <div class="schedule-table" aria-live="polite">
+                            <h3>Понедельник</h3>
+                            <p><b>18:00</b> — Break Dance (начинающие)</p>
+                            <p><b>19:15</b> — Street Workout</p>
+
+                            <h3>Вторник</h3>
+                            <p><b>17:00</b> — Stretching</p>
+                            <p><b>18:30</b> — Pole Sport (средний уровень)</p>
+
+                            <h3>Среда</h3>
+                            <p><b>18:00</b> — Break Dance (продвинутые)</p>
+                            <p><b>19:30</b> — Индивидуальные тренировки</p>
+
+                            <h3>Четверг</h3>
+                            <p><b>17:30</b> — Детские группы</p>
+                            <p><b>19:00</b> — Stretching PRO</p>
+
+                            <h3>Пятница</h3>
+                            <p><b>18:00</b> — Street Workout (Outdoor)</p>
+                            <p><b>19:30</b> — Pole Sport (подготовка к выступлениям)</p>
+
+                            <h3>Суббота</h3>
+                            <p><b>11:00</b> — Семейные тренировки</p>
+                            <p><b>13:00</b> — Индивидуальные занятия</p>
+
+                            <p class="schedule-note">
+                                * Расписание может меняться. Уточняйте наличие мест по телефону или оставляйте заявку на сайте.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- About -->
+            <section class="section about">
+                <div class="container">
+                    <div class="section-title">
+                        <h2>Что о нас говорят</h2>
+                    </div>
+                    <div class="about-content">
+                        <div class="about-text">
+                            <div class="trainer-info">
+                                <div
+                                    class="trainer-avatar"
+                                    style="background: #ff9800"
+                                >
+                                    А
+                                </div>
+                                <div>
+                                    <h4>Альберт Стародумов</h4>
+                                    <p>
+                                        Основатель и главный тренер Steel
+                                        Brothers. Более 10 лет опыта в
+                                        брейк-дансе и воркауте. Чемпион России
+                                        по брейк-дансу 2018.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Reviews -->
+            <section id="reviews" class="section reviews">
+                <div class="container">
+                    <div class="reviews-grid">
+                        <div class="review-item">
+                            <div
+                                class="review-icon"
+                                style="background: #4caf50"
+                            >
+                                В
+                            </div>
+                            <div>
+                                <b>Владимир Петров</b>
+                                <p>
+                                    Отличная студия! Тренер профессиональный,
+                                    внимательный, нацелен на результат. На
+                                    занятиях очень дружественная атмосфера!
+                                </p>
+                            </div>
+                        </div>
+                        <div class="review-item">
+                            <div
+                                class="review-icon"
+                                style="background: #ec407a"
+                            >
+                                Т
+                            </div>
+                            <div>
+                                <b>Татьяна Наумова</b>
+                                <p>
+                                    Очень крутое место. Тренер Альберт не только
+                                    профессионал, но и старший товарищ, друг для
+                                    ребят. Крутые фишки, классная атмосфера 💪💪
+                                </p>
+                            </div>
+                        </div>
+                        <div class="review-item">
+                            <div
+                                class="review-icon"
+                                style="background: #ff7043"
+                            >
+                                Д
+                            </div>
+                            <div>
+                                <b>Дарья Батурина</b>
+                                <p>
+                                    Замечательная студия танцев, очень
+                                    ответственный тренер! Водим ребёнка не так
+                                    давно, но уже огромный прогресс.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FAQ -->
+            <section id="faq" class="section faq">
+                <div class="container">
+                    <div class="section-title">
+                        <h2>Часто задаваемые вопросы</h2>
+                    </div>
+                    <div class="faq-content">
+                        <p>
+                            Здесь будут размещены ответы на самые популярные
+                            вопросы о занятиях в нашей студии.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Form -->
+            <section id="form" class="section contact-form">
+                <div class="container">
+                    <div class="section-title">
+                        <h2>Остались вопросы? Оставьте заявку!</h2>
+                    </div>
+                    <form class="form">
+                        <input
+                            type="text"
+                            name="name"
+                            placeholder="Ваше имя"
+                            class="form-input"
+                            autocomplete="name"
+                            required
+                        />
+                        <input
+                            type="tel"
+                            name="phone"
+                            placeholder="Номер телефона"
+                            class="form-input"
+                            autocomplete="tel"
+                            pattern="[\d\s()+-]{6,}"
+                            required
+                        />
+                        <input
+                            type="email"
+                            name="email"
+                            placeholder="Email"
+                            class="form-input"
+                            autocomplete="email"
+                            required
+                        />
+                        <textarea
+                            placeholder="Сообщение"
+                            class="form-textarea"
+                            name="message"
+                            rows="4"
+                            aria-label="Сообщение"
+                        ></textarea>
+                        <button type="submit" class="btn btn-primary">
+                            Отправить заявку
+                        </button>
+                    </form>
+                </div>
+            </section>
+
+            <!-- Contacts -->
+            <section id="contacts" class="section contacts">
+                <div class="container">
+                    <div class="section-title">
+                        <h2>Контакты</h2>
+                    </div>
+                    <div class="contacts-content">
+                        <div class="contacts-info">
+                            <div class="contact-item">
+                                <h4>Адрес</h4>
+                                <p>г. Кострома, Профсоюзная улица, 3к2, 2 этаж</p>
+                            </div>
+                            <div class="contact-item">
+                                <h4>Телефон</h4>
+                                <p>+7 (900) 123-45-67</p>
+                            </div>
+                            <div class="contact-item">
+                                <h4>Email</h4>
+                                <p>info@steelbrothers.ru</p>
+                            </div>
+                        </div>
+                        <div class="map-container">
+                            <!-- 
+                        🗺️ НАСТРОЙКА КАРТЫ:
+                        
+                        GOOGLE MAPS:
+                        1. Откройте Google Maps
+                        2. Найдите ваш адрес
+                        3. Нажмите "Поделиться" → "Встроить карту" 
+                        4. Скопируйте iframe код и замените src ниже
+                        
+                        ЯНДЕКС КАРТЫ:
+                        1. Откройте Яндекс.Карты  
+                        2. Найдите адрес → "Поделиться" → "HTML-код"
+                        3. Замените src ниже на полученную ссылку
+                        
+                        КОНТАКТНАЯ ИНФОРМАЦИЯ:
+                        Измените адрес, телефон и email выше в .contacts-info
+                        -->
+                            <iframe
+                                src="https://yandex.ru/map-widget/v1/?ll=40.929710%2C57.761873&z=17&mode=search&text=%D0%9A%D0%BE%D1%81%D1%82%D1%80%D0%BE%D0%BC%D0%B0%2C%20%D0%9F%D1%80%D0%BE%D1%84%D1%81%D0%BE%D1%8E%D0%B7%D0%BD%D0%B0%D1%8F%20%D1%83%D0%BB%D0%B8%D1%86%D0%B0%2C%203%D0%BA2"
+                                width="100%"
+                                height="400"
+                                frameborder="0"
+                                title="Steel Brothers на Профсоюзной 3к2"
+                                allowfullscreen
+                            ></iframe>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Photo Modal -->
+            <div id="photoModal" class="photo-modal" onclick="closeModal()">
+                <div class="modal-content" onclick="event.stopPropagation()">
+                    <button class="modal-close" onclick="closeModal()">
+                        &times;
+                    </button>
+                    <button
+                        class="modal-nav modal-prev"
+                        onclick="prevModalImage()"
+                    >
+                        &#8249;
+                    </button>
+                    <img id="modalImage" src="" alt="" class="modal-image" />
+                    <button
+                        class="modal-nav modal-next"
+                        onclick="nextModalImage()"
+                    >
+                        &#8250;
+                    </button>
+                    <div id="modalCounter" class="modal-counter">1 / 12</div>
+                </div>
+            </div>
+
+            <!-- Video Gallery Modal -->
+            <div
+                id="videoModal"
+                class="video-modal"
+                role="dialog"
+                aria-modal="true"
+                aria-labelledby="videoModalTitle"
+                onclick="closeVideoModal()"
+            >
+                <div
+                    class="video-modal-content"
+                    onclick="event.stopPropagation()"
+                >
+                    <button
+                        class="modal-close"
+                        type="button"
+                        onclick="closeVideoModal()"
+                        aria-label="Закрыть видео"
+                    >
+                        &times;
+                    </button>
+                    <h2 id="videoModalTitle">Видео тренировки Steel Brothers</h2>
+                    <div class="video-filters" id="videoFilters"></div>
+                    <div class="video-gallery-grid" id="videoGalleryGrid"></div>
+                </div>
+            </div>
+
+            <!-- Video Player Modal -->
+            <div
+                id="videoPlayerModal"
+                class="video-player-modal"
+                role="dialog"
+                aria-modal="true"
+                aria-labelledby="videoPlayerTitle"
+                onclick="closeVideoPlayer()"
+            >
+                <div
+                    class="video-player-content"
+                    onclick="event.stopPropagation()"
+                >
+                    <button
+                        class="modal-close"
+                        type="button"
+                        onclick="closeVideoPlayer()"
+                        aria-label="Закрыть видео"
+                    >
+                        &times;
+                    </button>
+                    <h2 id="videoPlayerTitle" class="video-player-title">Видео</h2>
+                    <div class="video-player-wrapper">
+                        <iframe
+                            id="videoPlayerIframe"
+                            src=""
+                            frameborder="0"
+                            allow="clipboard-write; autoplay"
+                            webkitallowfullscreen
+                            mozallowfullscreen
+                            allowfullscreen
+                            title="Видео плеер ВКонтакте"
+                        ></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <footer class="footer">
+                <div class="container">
+                    <div class="footer-content">
+                        <div class="footer-logo"><a href="#top">Steel Brothers</a></div>
+                        <div class="footer-info">
+                            <p>© 2024 Steel Brothers. Все права защищены.</p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+
+        <!-- EmailJS SDK -->
+        <script
+            type="text/javascript"
+            src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+        ></script>
+        <script src="script.js"></script>
+    </body>
+</html>
