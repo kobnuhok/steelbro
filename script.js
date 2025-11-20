@@ -605,6 +605,7 @@ const EMAILJS_CONFIG = {
 };
 
 const TARGET_EMAIL = 'kobnuhok12@gmail.com';  // 🔄 ЗАМЕНИТЕ НА ВАШ EMAIL
+const BACKEND_ENDPOINT = 'https://your-backend.example.com/api/whatsapp-webhook'; // 🔄 Замените на ваш endpoint или оставьте как есть
 
 /* ===== ОБРАБОТКА ФОРМ ===== */
 function initializeFormHandlers() {
@@ -623,18 +624,33 @@ function handleFormSubmit(event) {
     const phone = formData.get('phone') || event.target[1].value;
     const email = formData.get('email') || event.target[2].value;
     const message = formData.get('message') || event.target[3].value;
+    const consent = formData.get('consent');
 
     if (!name || !phone || !email) {
         alert('Пожалуйста, заполните все обязательные поля');
         return;
     }
 
-    sendEmail(name, phone, email, message, event.target);
+    if (!consent) {
+        alert('Для отправки заявки необходимо дать согласие на обработку персональных данных.');
+        return;
+    }
+
+    const submissionPayload = {
+        name,
+        phone,
+        email,
+        message,
+        consentGiven: true,
+        submittedAt: new Date().toISOString()
+    };
+
+    sendEmail(name, phone, email, message, event.target, submissionPayload);
 }
 
-function sendEmail(name, phone, email, message, form) {
+function sendEmail(name, phone, email, message, form, submissionPayload) {
     if (EMAILJS_CONFIG.SERVICE_ID === 'YOUR_SERVICE_ID') {
-        sendEmailFallback(name, phone, email, message, form);
+        sendEmailFallback(name, phone, email, message, form, submissionPayload);
         return;
     }
 
@@ -657,6 +673,7 @@ function sendEmail(name, phone, email, message, form) {
             console.log('SUCCESS!', response.status, response.text);
             alert('Спасибо за заявку! Ваше сообщение успешно отправлено. Мы свяжемся с вами в ближайшее время.');
             form.reset();
+            notifyBackend(submissionPayload);
         })
         .catch(function(error) {
             console.log('FAILED...', error);
@@ -668,7 +685,7 @@ function sendEmail(name, phone, email, message, form) {
         });
 }
 
-function sendEmailFallback(name, phone, email, message, form) {
+function sendEmailFallback(name, phone, email, message, form, submissionPayload) {
     const subject = encodeURIComponent('Новая заявка с сайта Steel Brothers');
     const body = encodeURIComponent(`
 Новая заявка с сайта Steel Brothers:
@@ -685,6 +702,31 @@ Email: ${email}
     window.open(mailtoLink);
     alert('EmailJS не настроен. Откроется ваш почтовый клиент для отправки.');
     form.reset();
+    notifyBackend(submissionPayload);
+}
+
+function notifyBackend(payload) {
+    if (!BACKEND_ENDPOINT || BACKEND_ENDPOINT.includes('your-backend.example.com')) {
+        console.warn('BACKEND_ENDPOINT не настроен. Укажите URL вашего сервера для отправки уведомлений в WhatsApp.');
+        return;
+    }
+
+    fetch(BACKEND_ENDPOINT, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(payload)
+    })
+        .then((response) => {
+            if (!response.ok) {
+                throw new Error(`Backend responded with status ${response.status}`);
+            }
+            console.log('Backend notified successfully');
+        })
+        .catch((error) => {
+            console.warn('Не удалось отправить данные на backend для WhatsApp:', error);
+        });
 }
 
 /* ===== ЭФФЕКТЫ ПРОКРУТКИ ===== */
