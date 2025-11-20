@@ -458,9 +458,12 @@ function getVkEmbedUrl(vkVideoUrl) {
         return null;
     }
     
-    // Формируем embed URL для VK
-    // Формат: https://vk.com/video_ext.php?oid={owner_id}&id={video_id}
-    return `https://vk.com/video_ext.php?oid=${params.ownerId}&id=${params.videoId}`;
+    // Формируем embed URL для VK с автовоспроизведением и оптимизацией
+    // Параметры:
+    // - autoplay=1: автовоспроизведение
+    // - hd=1: HD качество (ускоряет загрузку)
+    // - api=1: включение API для управления
+    return `https://vk.com/video_ext.php?oid=${params.ownerId}&id=${params.videoId}&autoplay=1&hd=1&api=1`;
 }
 
 function openVideoLink(video) {
@@ -488,17 +491,18 @@ function openVideoPlayer(video, embedUrl) {
         return;
     }
 
-    // Устанавливаем iframe с видео
-    playerIframe.src = embedUrl;
-    
-    // Устанавливаем заголовок
+    // Устанавливаем заголовок сразу
     if (playerTitle) {
         playerTitle.textContent = video.title || 'Видео';
     }
 
-    // Показываем модальное окно
+    // Показываем модальное окно сразу
     playerModal.classList.add('active');
     document.body.style.overflow = 'hidden';
+
+    // Устанавливаем src iframe сразу для быстрой загрузки и автовоспроизведения
+    // VK начнет загружать видео сразу благодаря параметру autoplay=1 в URL
+    playerIframe.src = embedUrl;
 }
 
 function closeVideoPlayer() {
